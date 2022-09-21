@@ -19,6 +19,7 @@
 
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-4" id="content">
+					<h3 class="date">{{ date|date:'D, d F Y' }} </h3>
 					<h2 class="title">WHAT DO YOU WANT TO DO TODAY?</h2>
 
 					<form action="{% url 'add_item'  %}" method="POST" role="form">

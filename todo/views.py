@@ -2,19 +2,22 @@ from django.shortcuts import render, redirect
 from django.views.decorators.http import require_POST
 from .models import ToDo
 from .forms import ToDoForm
+import datetime
 
 
 def index(request):
     form = ToDoForm()
+    today = datetime.datetime.now()
     todo_list = ToDo.objects.order_by('id')
-    return render(request, 'todo/index.html', {'todo_list': todo_list, 'form': form})
+    return render(request, 'todo/index.html',
+                  {'todo_list': todo_list, 'form': form, 'date': today})
 
 
 @require_POST
 def add_item(request):
     form = ToDoForm(request.POST)
     if form.is_valid():
-        new_item = ToDo(item=request.POST['item'])
+        new_item = ToDo(item=form.cleaned_data['item'])
         new_item.save()
 
     return redirect('index')

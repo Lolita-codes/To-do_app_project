@@ -5,6 +5,12 @@ body {
 #wrapper {
 	margin-top: 10% !important;
 }
+
+.date {
+    color: #A12568;
+    text-align: center;
+}
+
 #content {
 	background: #2A0944;
 	padding: 25px;
