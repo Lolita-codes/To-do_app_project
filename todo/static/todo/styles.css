@@ -1,12 +1,12 @@
 body {
-	background: rgba(44, 62, 80, .8);
+	background: #3B185F;
 	font-family: 'Oswald', 'Futura', sans-serif;
 }
 #wrapper {
 	margin-top: 10% !important;
 }
 #content {
-	background: beige;
+	background: #2A0944;
 	padding: 25px;
 }
 #content > h2 {
@@ -14,6 +14,16 @@ body {
 	text-align: center;
 	padding-top: 0;
 }
+
+.title {
+    color: #A12568
+}
+
+#add-btn {
+    background: #3B185F;
+    border-color: #3B185F;
+}
+
 .t10 {
 	margin-top: 10px;
 }
